@@ -28,7 +28,7 @@ export const ProductsProvider = ({children}: ChildrenType): ReactElement => {
         .catch((err) => {
             if (err instanceof Error) console.log(err.message)
         })
-        console.log(data)
+        // console.log(data)
         return data
       }
       fetchProducts().then((products) => setProducts(products))
