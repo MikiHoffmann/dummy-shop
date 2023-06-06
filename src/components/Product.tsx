@@ -6,10 +6,14 @@ type PropsType = {
 }
 const Product = ({ product }: PropsType): ReactElement => {
   const content = (
-    <article>
-        <h2>{product.category}</h2>
+    <article className="productArticle">
+      <figure>
+        <img className="productImage" src={product.image} alt={product.title} />
+        <figcaption>
+          <h2>{product.category}</h2>
+        </figcaption>
+      </figure>
       <h3>{product.title}</h3>
-      <img src={product.image} alt={product.title} />
     </article>
   )
   return content

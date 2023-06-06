@@ -1,0 +1,13 @@
+.productList {
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+    padding: 1em;
+    
+}
+.productArticle {
+    flex: 1;
+    .productImage {
+        border-radius: 8px;
+    }
+}

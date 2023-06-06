@@ -11,7 +11,7 @@ const ProductList = () => {
       return <Product key={product.id} product={product} />
     })
   }
-  const content = <main>{pageContent}</main>
+  const content = <main className="productList">{pageContent}</main>
   return content
 }
 
