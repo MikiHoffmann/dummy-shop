@@ -1,3 +1,5 @@
+import NavBar from "./NavBar"
+
 const Header = () => {
   return (
     <>
@@ -5,6 +7,7 @@ const Header = () => {
         <div className="headerTitle">
             <h1>Dummy shop</h1>
         </div>
+        <NavBar />
       </header>
     </>
   )

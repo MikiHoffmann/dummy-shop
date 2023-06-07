@@ -1,12 +1,14 @@
 .productList {
     display: flex;
     flex-wrap: wrap;
+    gap: 1em;
     width: 100%;
     padding: 1em;
     
 }
 .productArticle {
-    flex: 1;
+    flex: 30%;
+    max-width: 30%;
     .productImage {
         border-radius: 8px;
     }
