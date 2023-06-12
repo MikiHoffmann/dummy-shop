@@ -8,7 +8,7 @@ const Product = ({ product }: PropsType): ReactElement => {
   const content = (
     <article className="productArticle">
       <figure>
-        <img className="productImage" src={product.image} alt={product.title} />
+        <img className="productImage" src={product.thumbnail} alt={product.title} />
         <figcaption>
           <h2>{product.category}</h2>
         </figcaption>
