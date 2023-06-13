@@ -1,4 +1,13 @@
-export const InitialProductState = [
+export const categoryData = [
+  { category: "smartphones", id: 1 },
+  { category: "laptops", id: 2 },
+  { category: "fragrances", id: 3 },
+  { category: "skincare", id: 4 },
+  { category: "groceries", id: 5 },
+  { category: "home-decoration", id: 6 },
+]
+
+export const productData = [
   {
     brand: "Apple",
     category: "smartphones",

@@ -1,5 +1,5 @@
-import { ReactElement, createContext } from "react"
-import { InitialProductState } from "./InitialProductState"
+import { ReactElement, createContext, useState, useEffect } from "react"
+import { productData } from "./ProductData"
 
 export interface ProductType {
   brand: string
@@ -24,8 +24,13 @@ const ProductsContext =
   createContext<UseProductsContextType>(initialContextState)
 
 export const ProductsProvider = ({ children }: ChildrenType): ReactElement => {
-  // const [products, setProducts] = useState<ProductType[]>([])
-const products = InitialProductState
+  const [products, setProducts] = useState<ProductType[]>([])
+
+useEffect(() => {
+  
+setProducts(productData)
+}, [productData])
+
 
   // useEffect(() => {
   //   const fetchProducts = async (): Promise<ProductType[]> => {

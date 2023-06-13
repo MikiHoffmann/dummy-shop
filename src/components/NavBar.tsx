@@ -1,23 +1,23 @@
-type PropsType = {
-  category: Boolean
-  setCategory: React.Dispatch<React.SetStateAction<Boolean>>
-}
-const NavBar = ({category, setCategory}: PropsType) => {
-  return (
-    <div className="navBar">
-        <ul>
-            <li className="pageLink">
-              <button value="men's clothing">men's clothing</button>
-            </li>
-            <li className="pageLink">
-              <button value="jewelery">jewelery</button>
-            </li>
-            <li className="pageLink">
-              <button value="electronics">electronics</button>
-            </li>
-        </ul>
-    </div>
-  )
+import useCategories from "../hooks/useCategories"
+import { ReactElement } from "react"
+
+const NavBar = () => {
+  const { categories } = useCategories()
+  console.log(categories)
+
+  let pageContent: ReactElement | ReactElement[] = <ul>list</ul>
+
+  if (categories?.length) {
+    pageContent = categories.map((category) => {
+      return (
+        <li key={category.id}>
+          <button value={category.category}>{category.category}</button>
+        </li>
+      )
+    })
+  }
+  const content = <ul>{pageContent}</ul>
+  return <>{content}</>
 }
 
 export default NavBar
