@@ -4,11 +4,12 @@ import Footer from "./components/Footer"
 import { useState } from "react"
 
 function App() {
-  const [category, setCategory] = useState<boolean>(false)
+  const [viewCategory, setViewCategory] = useState<boolean>(false)
+  const [ isCategory, setIsCategory] = useState<string>("")
   return (
     <>
-      <Header category={category} setCategory={setCategory} />
-      <ProductList />
+      <Header  setViewCategory={setViewCategory} isCategory={isCategory} setIsCategory={setIsCategory} />
+      <ProductList viewCategory={viewCategory} isCategory={isCategory}/>
       <Footer />
     </>
   )

@@ -1,17 +1,21 @@
 import NavBar from "./NavBar"
 
 type PropsType = {
-  category: Boolean
-  setCategory: React.Dispatch<React.SetStateAction<Boolean>>
+  setViewCategory: React.Dispatch<React.SetStateAction<boolean>>
+  isCategory: string
+  setIsCategory: React.Dispatch<React.SetStateAction<string>>
 }
-const Header = ({category, setCategory}: PropsType) => {
+const Header = ({setViewCategory, isCategory, setIsCategory}: PropsType) => {
   return (
     <>
-      <header>
-        <div className="headerTitle">
-            <h1>Dummy shop</h1>
+      <header className="mainHeader">
+        <div className="headerTop">
+            <h1 className="headerTitle">Dummy shop</h1>
+            <div className="signInBox">
+              <button>sign In</button>
+            </div>
         </div>
-        <NavBar category={category} setCategory={setCategory} />
+        <NavBar setViewCategory={setViewCategory} isCategory={isCategory} setIsCategory={setIsCategory}/>
       </header>
     </>
   )

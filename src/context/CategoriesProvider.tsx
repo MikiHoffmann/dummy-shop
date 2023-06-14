@@ -8,7 +8,6 @@ export interface CategoryType {
 export type UseCategoryContextType = { categories: CategoryType[] }
 export type ChildrenType = { children?: ReactElement | ReactElement[] }
 
-// const initialState: ProductType[] = []
 const initialContextState: UseCategoryContextType = { categories: [] }
 const CategoryContext =
   createContext<UseCategoryContextType>(initialContextState)

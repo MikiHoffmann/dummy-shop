@@ -1,4 +1,16 @@
-.headerTitle {
-    font-family: 'Courier New', Courier, monospace;
-    padding: .8em;
+.mainHeader {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    padding: 1em;
+    .headerTop {
+        display: flex;
+        flex-direction: row;
+        width: 100%;
+        .headerTitle {
+            flex: 1;
+            font-family: 'Courier New', Courier, monospace;
+            padding: .8em 0;
+        }
+    }
 }

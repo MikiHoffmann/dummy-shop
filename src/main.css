@@ -16,6 +16,7 @@ body {
   background-color: black;
   color: white;
   overflow-x: hidden;
+  overflow-y: scroll;
 }
 
 img {
@@ -23,17 +24,40 @@ img {
   max-width: 100%;
 }
 
-.headerTitle {
-  font-family: "Courier New", Courier, monospace;
-  padding: 0.8em;
+ul {
+  list-style-type: none;
 }
 
-.navBar {
+.mainHeader {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  padding: 1em;
+}
+.mainHeader .headerTop {
   display: flex;
   flex-direction: row;
-  gap: 0.5em;
   width: 100%;
+}
+.mainHeader .headerTop .headerTitle {
+  flex: 1;
+  font-family: "Courier New", Courier, monospace;
+  padding: 0.8em 0;
+}
+
+.navBarList {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  gap: 0.5em;
+  justify-content: center;
   padding: 0.8em;
+}
+.navBarList li .navButton {
+  padding: 0.5em;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
 }
 
 .productList {
